@@ -1,0 +1,38 @@
+{
+  "name": "Citation Manager",
+  "version": "1.0.0",
+  "description": "Highlight and cite text in APA, MLA, or Chicago format.",
+  "permissions": ["storage", "contextMenus", "activeTab", "scripting", "clipboardWrite", "notifications"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+    "icons/icon16.png",
+    "icons/icon64.png",
+    "icons/icon128.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "24": "icons/icon64.png",
+      "32": "icons/icon128.png"
+    },
+    "default_title": "Citation Manager",
+    "default_popup": "login.html"
+  },
+  "manifest_version": 3
+}
+
+    

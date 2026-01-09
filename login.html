@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Citation Manager - Login</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input {
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 8px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+        .links {
+            margin-top: 10px;
+            font-size: 12px;
+        }
+        .links a {
+            color: #0066cc;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="loginForm">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <div id="loginError" class="error"></div>
+            <button id="loginBtn">Login</button>
+            <div class="links">
+                <a id="createAccountLink">Create Account</a> | 
+                <a id="resetPasswordLink">Reset Password</a>
+            </div>
+        </div>
+
+        <div id="registerForm" style="display: none;">
+            <h2>Create Account</h2>
+            <input type="text" id="newUsername" placeholder="Username">
+            <input type="password" id="newPassword" placeholder="Password">
+            <input type="password" id="confirmPassword" placeholder="Confirm Password">
+            <input type="email" id="email" placeholder="Email">
+            <div id="registerError" class="error"></div>
+            <button id="registerBtn">Register</button>
+            <div class="links">
+                <a id="backToLoginLink">Back to Login</a>
+            </div>
+        </div>
+
+        <div id="resetForm" style="display: none;">
+            <h2>Reset Password</h2>
+            <input type="email" id="resetEmail" placeholder="Email">
+            <div id="resetError" class="error"></div>
+            <button id="resetBtn">Send Reset Link</button>
+            <div class="links">
+                <a id="backToLoginFromResetLink">Back to Login</a>
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
